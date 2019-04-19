@@ -1,0 +1,78 @@
+/* ====================================== RESPONSIVENESS FOR TABLETS ====================================== */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+	.select-dropdown {
+		margin-top: 0!important;
+	}
+	.countries {
+		flex-direction: column!important;
+		justify-content: center!important;
+		align-items: center;
+		align-content: center;
+		width: 100%;
+		overflow-x: hidden;
+	}
+	.countries-card {
+		max-width: 70%!important;
+	}
+}
+
+/* ====================================== RESPONSIVENESS FOR MOBILE PHONES ====================================== */
+@media screen and (max-width: 768px) {
+	.components {
+		width: 100%;
+	}
+	main.p-5 {
+		padding: 0.5rem!important;
+	}
+	nav {
+		padding-top: 2em!important;
+		padding-right: 2em!important;
+		padding-bottom: 2em!important;
+		padding-left: 1em!important;
+	}
+	.logo {
+		font-size: 1.5em!important;
+		padding-left: 0.5em!important;
+	}
+	#tooltip {
+		font-size: 1em!important;
+	}
+	.tools {
+		flex-wrap: wrap;
+		align-items: center!important;
+	}
+	#search {
+		width: 250px;
+		margin-top: 1.5em;
+	}
+	.select-dropdown {
+		margin-top: 1.5em;
+	}
+	.countries {
+		flex-direction: column!important;
+		justify-content: center!important;
+		align-items: center;
+		align-content: center;
+		width: 100%;
+		overflow-x: hidden;
+	}
+	.countries-card:first-child {
+		margin-top: 5px;
+	}
+	.countries-card {
+		box-shadow: 0 20px 15px 2px rgba(0,0,0,0.20)!important;
+		max-width: 80%!important;
+		/*margin-right: 0;*/
+		/*display: none;*/
+		margin-top: 3em;
+	}
+	.countries-card__title {
+		font-size: 1.5em;
+	}
+	.countries-card__details-title--bold {
+		font-size: 1.2em;
+	}
+	.countries-card__details-title--light {
+		font-size: 1em;
+	}
+}

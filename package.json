@@ -1,0 +1,27 @@
+{
+  "name": "countries",
+  "version": "1.0.0",
+  "description": "A rest countries api with color theme switcher",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "fecthCountries.js"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "backend",
+    "fetch",
+    "populate",
+    "template",
+    "information",
+    "endpoint"
+  ],
+  "author": "Precious Adeyinka",
+  "license": "ISC",
+  "dependencies": {
+    "mustache": "^3.0.1"
+  }
+}

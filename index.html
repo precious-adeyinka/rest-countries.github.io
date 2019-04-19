@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Rest Countries</title>
+	
+	<link rel="stylesheet" type="text/css" href="lib/bower_components/normalize.css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="lib/bower_components/fontawesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="lib/bower_components/animate.css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<body>
+	<section class="component">
+		<header class="container pt-0 pb-0 pl-0 pr-0">
+			<nav class="light-theme-dark">
+				<div class="">
+					<a class="logo" href="#" target="_self">Where in the world?</a>
+				</div>
+
+				<div class="">
+					<div class="text-right" id="tooltip" data-toggle="tooltip" data-placement="bottom" title="Toggle dark mode"><i class="far fa-moon" id="toggle-switch"></i>&nbsp;&nbsp;Dark Mode
+					</div>
+				</div>
+			</nav>
+		</header>
+
+
+
+		<main class="container p-5">
+			<section class="tools container">
+				<section class="search">
+					<form class="form">
+						<div class="searchWithIcon">
+							<input class="form-control light-theme-dark" type="text" name="search" placeholder="Search for a country..." id="search">
+							<i class="fa fa-search"></i>
+						</div>
+					</form>
+				</section>
+				<section class="filter">
+					<div class="select-dropdown light-theme-dark">Filter by Region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+					</div>
+
+					<ul class="region">
+						<li class="region__name"><a class="region__link" href="#" target="_self">Africa</a></li>
+						<li class="region__name"><a class="region__link" href="#" target="_self">America</a></li>
+						<li class="region__name"><a class="region__link" href="#" target="_self">Asia</a></li>
+						<li class="region__name"><a class="region__link" href="#" target="_self">Europe</a></li>
+						<li class="region__name"><a class="region__link" href="#" target="_self">Oceania</a></li>
+					</ul>
+				</section>
+			</section>
+			
+			<!-- Preloader -->
+			<div class="preloader-wrapper">
+				<div class="preloader"></div>
+			</div>
+			<!-- <div class="spinner-wrapper"> -->
+<!-- 				<div class="spinner">
+				  <div class="rect1"></div>
+				  <div class="rect2"></div>
+				  <div class="rect3"></div>
+				  <div class="rect4"></div>
+				  <div class="rect5"></div>
+				</div> -->
+			<!-- </div> -->
+
+			<!-- COUNTRIES -->
+			<section class="countries">
+				<!-- Template -->
+				<!-- <section class="countries-card">
+					<section class="countries-card__img-wrapper">
+						<img src="assets/img/essential.jpg" class="countries-card__img">
+					</section>
+
+					<section class="countries-card__info">
+						<h3 class="countries-card__title">Germany</h3>
+						<section class="countries-card__desc">
+							<div class="countries-card__details">
+								<strong class="countries-card__details-title--bold">Population:</strong> 
+								<span class="countries-card__details-title--light">81,770,990</span>
+							</div>
+							<div class="countries-card__details">
+								<strong class="countries-card__details-title--bold">Region:</strong> 
+								<span class="countries-card__details-title--light">Europe</span>
+							</div>
+							<div class="countries-card__details">
+								<strong class="countries-card__details-title--bold">Capital:</strong> 
+								<span class="countries-card__details-title--light">Berlin</span>
+							</div>
+						</section>
+					</section>
+				</section> -->
+			</section>
+		</main>
+
+		<footer></footer>
+	</section>
+
+	<!-- Scripts -->
+	<script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="node_modules/mustache/mustache.min.js"></script>
+	<script type="text/javascript" src="assets/js/index.js"></script>
+	<script async defer type="text/javascript" src="assets/js/fetchCountries.js"></script>
+	<script type="x-tmpl-mustache" id="template">
+		<section class="countries-card">
+			<section class="countries-card__img-wrapper">
+				<img src="{{flag}}" class="countries-card__img">
+			</section>
+			<section class="countries-card__info">
+				<h3 class="countries-card__title">{{name}}</h3>
+				<section class="countries-card__desc">
+					<div class="countries-card__details">
+						<strong class="countries-card__details-title--bold">Population:</strong> 
+						<span class="countries-card__details-title--light">{{population}}</span>
+					</div>
+					<div class="countries-card__details">
+						<strong class="countries-card__details-title--bold">Region:</strong> 
+						<span class="countries-card__details-title--light">{{region}}</span>
+					</div>
+					<div class="countries-card__details">
+						<strong class="countries-card__details-title--bold">Capital:</strong> 
+						<span class="countries-card__details-title--light">{{capital}}</span>
+					</div>
+				</section>
+			</section>
+		</section>
+	</script>
+</body>
+</html>
